@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+import "google/protobuf/timestamp.proto";
+
+package protobuf_web_token.pwt;
+option csharp_namespace = "ProtobufWebToken.Pwt";
+
+
+message PToken {
+	bytes Subject = 1;
+	string DisplayName = 2;
+	google.protobuf.Timestamp ExpireAt = 3;
+	google.protobuf.Timestamp ValidFrom = 4;
+	repeated string Roles = 5;
+}
